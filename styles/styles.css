@@ -1,0 +1,106 @@
+body{
+  height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #DCDCDC;
+}
+
+#game {
+  margin: 10px;
+}
+
+section{
+  margin-bottom: 15px;  
+  height: 95px;
+  border: 1px solid #000;  
+  display: flex;
+  align-items: center;
+  justify-content: center;      
+}
+
+#lifepoints{
+  display: flex;
+  justify-content: space-around;  
+}
+
+.player, .monster{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lifebar {
+  width: 300px;
+  height: 15px;
+  border: 1px solid #000;
+  background-color: #008000;
+}
+
+.label {
+  display: block;
+  margin: 10px 0 10px;
+}
+
+button{
+  height: 25px;
+  border-radius: 5px;
+}
+
+#btnstart{
+  background-color: #483D8B;
+  color: #fff;  
+}
+
+.option{
+  margin-left: 15px;
+}
+
+.attack{
+  background-color: #f32222;
+  color: #fff;
+}
+
+.spattack{
+  background-color: #FFA500;  
+}
+
+.heal{
+  background-color: #1fac1f;
+  color: #fff;
+}
+
+.quit{
+  background-color: #A9A9A9;
+}
+
+.result{
+  height: 45px;
+}
+
+#victory{
+  color: #008000;
+}
+
+#defeat{
+  color: #f32222;
+}
+
+#logs{
+  display: flex;
+  flex-direction: column;    
+}
+
+.log{
+  width: 100%;  
+  text-align: center;  
+}
+
+.monsterdamage{
+  background-color: #FA8072;
+}
+
+.playerdamage{  
+  background-color: #6495ED;
+}
+
+

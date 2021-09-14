@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <title>Monster killer</title>
+</head>
+<body>
+  <main id="game">
+      <section id="lifepoints">
+        <div class="player">
+          <span class="label">Jogador</span>
+          <div class="lifebar"></div>
+          <span>100%</span>
+        </div>
+        <div class="monster">
+          <span class="label">Monstro</span>
+          <div class="lifebar"></div>
+          <span>100%</span>
+        </div>
+      </section>
+      <section id="start">
+        <button id="btnstart">INICIAR NOVO JOGO</button>
+      </section>  
+      <section>          
+          <button class="option attack">ATAQUE</button>
+          <button class="option spattack">ATAQUE ESPECIAL</button>
+          <button class="option heal">CURAR</button>
+          <button class="option quit">DESISTIR</button>
+      </section>
+      <section id="logs">
+        <div class="log monsterdamage">MONSTRO ATINGIU JOGADOR COM</div>                
+        <div class="log playerdamage">JOGADOR ATINGIU MONSTRO COM</div>                
+      </section>  
+      <section class="result" id="victory">
+        <h3>Você ganhou! :)</h3>
+      </section>
+      <section class="result" id="defeat">
+        <h3>Você perdeu! :(</h3>
+      </section>
+  </main>
+</body>
+</html>
