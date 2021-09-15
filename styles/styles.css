@@ -20,7 +20,7 @@ section{
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15)
 }
 
-#lifepoints{
+.lifepoints{
   display: flex;
   justify-content: space-around;  
 }
@@ -48,7 +48,7 @@ button{
   border-radius: 5px;
 }
 
-#btnstart{
+.btnstart{
   background-color: #483D8B;
   color: #fff;  
 }
@@ -79,17 +79,16 @@ button{
   height: 45px;
 }
 
-#victory{
+.victory{  
   color: #008000;
 }
 
-#defeat{
+.defeat{
   color: #f32222;
 }
 
-#logs{
-  display: flex;
-  flex-direction: column;    
+.logs{  
+  flex-direction: column;  
 }
 
 .log{
