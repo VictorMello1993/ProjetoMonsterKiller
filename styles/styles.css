@@ -2,7 +2,7 @@ body{
   height: 100vh;
   margin: 0;
   box-sizing: border-box;
-  background-color: #DCDCDC;
+  background-color: #DCDCDC;  
 }
 
 #game {
@@ -12,10 +12,12 @@ body{
 section{
   margin-bottom: 15px;  
   height: 95px;
-  border: 1px solid #000;  
+  border: 1px none #000;  
   display: flex;
   align-items: center;
   justify-content: center;      
+  background-color: #FDFAFA;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15)
 }
 
 #lifepoints{
@@ -38,7 +40,7 @@ section{
 
 .label {
   display: block;
-  margin: 10px 0 10px;
+  margin: 10px 10px;
 }
 
 button{
