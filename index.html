@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <title>Monster killer</title>
   </head>
@@ -13,13 +14,17 @@
       <section class="lifepoints">
         <div class="player">
           <span class="label">Jogador</span>
-          <div class="lifebar"></div>
-          <span>100%</span>
+          <div class="lifebar">
+            <div class="life" :style="{'width': width1}"></div>
+          </div>
+          <span>{{playerLife}}%</span>
         </div>
         <div class="monster">
           <span class="label">Monstro</span>
-          <div class="lifebar"></div>
-          <span>100%</span>
+          <div class="lifebar">
+            <div class="life" :style="{'width': width2}"></div>
+          </div>
+          <span>{{monsterLife}}%</span>
         </div>
       </section>
 
@@ -27,16 +32,18 @@
         <button class="btnstart">INICIAR NOVO JOGO</button>
       </section>
 
-      <section class="options" v-if="visible2" @click="quitGame($event)">
-        <button class="option attack">ATAQUE</button>
-        <button class="option spattack">ATAQUE ESPECIAL</button>
-        <button class="option heal">CURAR</button>
-        <button class="option quit">DESISTIR</button>
+      <section class="options" v-if="visible2">
+        <button class="option attack" @click="attack()">ATAQUE</button>
+        <button class="option spattack" @click="attack(true)">ATAQUE ESPECIAL</button>
+        <button class="option heal" @click="heal()">CURAR</button>
+        <button class="option quit" @click="quitGame()">DESISTIR</button>
       </section>
 
       <section class="logs" v-if="visible3">
-        <div class="log monsterdamage">MONSTRO ATINGIU JOGADOR COM</div>
-        <div class="log playerdamage">JOGADOR ATINGIU MONSTRO COM</div>
+        <!-- <template v-for="attack in attacks">          
+            <div class="log monsterdamage">MONSTRO ATINGIU JOGADOR COM {{attack.monsterDamage}}.</div>                
+            <div class="log playerdamage">JOGADOR ATINGIU MONSTRO COM {{attack.playerDamage}}.</div>         
+        </template> -->
       </section>
 
       <section class="victory" v-if="visible4">
