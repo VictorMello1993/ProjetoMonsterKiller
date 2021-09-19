@@ -28,7 +28,7 @@
         </div>
       </section>
 
-      <section class="start" @click="showControlPanel()" v-if="visible1">
+      <section class="start" @click="startGame()" v-if="visible1">
         <button class="btnstart">INICIAR NOVO JOGO</button>
       </section>
 
@@ -39,11 +39,8 @@
         <button class="option quit" @click="quitGame()">DESISTIR</button>
       </section>
 
-      <section class="logs" v-if="visible3">
-        <!-- <template v-for="attack in attacks">          
-            <div class="log monsterdamage">MONSTRO ATINGIU JOGADOR COM {{attack.monsterDamage}}.</div>                
-            <div class="log playerdamage">JOGADOR ATINGIU MONSTRO COM {{attack.playerDamage}}.</div>         
-        </template> -->
+      <section class="logs" v-if="visible3 && logs.length">
+        <div v-for="log in logs" class="log" :class="log.cls">{{log.text}}</div>
       </section>
 
       <section class="victory" v-if="visible4">
