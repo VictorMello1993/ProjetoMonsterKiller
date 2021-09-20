@@ -16,5 +16,6 @@ O projeto em si é o desafio proposto após a conclusão dos módulos 1 (manipul
 
 
 # Possíveis melhorias
+
 [ ] Incluir um resultado em caso de empate, ou seja, se acontecer tanto o jogador quanto o monstro tiverem seus pontos de vida zerados ao mesmo tempo.
 [ ] Incluir a barra de mana do jogador. Ela será consumida quando aplicar um ataque especial.
