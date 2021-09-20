@@ -86,17 +86,15 @@ new Vue({
     },
 
     showResults(lifePoints, target){
-      if(target === 'Monstro'){
-        this.visible4 = lifePoints === 0
-        this.visible3 = lifePoints !== 0
-        // this.visible2 = !this.visible4
-        // this.visible1 = this.visible4
+      if(target === 'Monstro' && lifePoints === 0){
+        this.visible4 = true
+        this.visible1 = this.visible4
+        this.visible2 = this.visible3 = this.visible5 = !this.visible1               
       }
-      else{
-        this.visible5 = lifePoints === 0
-        this.visible3 = lifePoints !== 0
-        // this.visible2 = !this.visible5
-        // this.visible1 = this.visible5
+      else if(target === 'Jogador' && lifePoints === 0){
+        this.visible5 = true
+        this.visible1 = this.visible5
+        this.visible2 = this.visible3 = this.visible4 = !this.visible1        
       }
     }
   },
